@@ -1,0 +1,16 @@
+.spacer{
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+.fCOntainer{
+    display: flex;
+    justify-content: space-between;
+}
+  .mat-mdc-button.fItem:hover {
+    color:azure;
+    font-size: 18px;
+    }
+
+  [mat-button]:not(:hover) {
+    color: inherit;
+  }
