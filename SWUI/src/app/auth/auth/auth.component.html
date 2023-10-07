@@ -1,4 +1,4 @@
-<button mat-raised-button color="primary" (click)="toggle()" >{{flag?'login':'register'}}</button>
+<button mat-raised-button color="accent" style="width:350px;" (click)="toggle()" >{{flag?'login':'register'}}</button>
 <div style="display: flex; justify-content: center;">
     <div *ngIf="flag; else register">
         <app-register></app-register>
