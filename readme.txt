@@ -26,7 +26,7 @@ main.js               | main          |  71.07 kB |
 runtime.js            | runtime       |   6.51 kB |
 
                       | Initial Total |   5.00 MB
-
+*get fetch and pull first
 *verify data by moving profile to load lazyly generating above result and comparing 
 *check if profileRoute sees in console
 *add content to profileEdit and profileView 
