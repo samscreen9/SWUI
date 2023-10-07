@@ -27,5 +27,6 @@ runtime.js            | runtime       |   6.51 kB |
 
                       | Initial Total |   5.00 MB
 
-*verify data by moving profile to load lazyly
+*verify data by moving profile to load lazyly generating above result and comparing 
+*check if profileRoute sees in console
 *add content to profileEdit and profileView 
