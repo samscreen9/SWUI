@@ -29,4 +29,14 @@ runtime.js            | runtime       |   6.51 kB |
 *get fetch and pull first
 *verify data by moving profile to load lazyly generating above result and comparing 
 *check if profileRoute sees in console
-*add content to profileEdit and profileView 
+*add content to profileEdit and profileView
+
+create register add new user 
+login user1 check ttfb logout
+login user2 check ttfb logout
+compare ttfb 
+
+
+
+async check email/phone exists
+
