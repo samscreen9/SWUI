@@ -1,31 +1,34 @@
-<form (submit)="login('u')">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-subtitle></mat-card-subtitle>
       <mat-card-title>Login</mat-card-title>
     </mat-card-header>
+
     <mat-card-content>
+
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="">
+        <input matInput placeholder="Ex. Pizza" value="" formControlName="email" required>
       </mat-form-field>
-      <div >
+
+      <div>
         <mat-form-field class="example-full-width">
           <mat-label>Password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
-
       </div>
+
       <a routerLink="/forget-password">Forget Password ?</a>
       <mat-divider></mat-divider>
     </mat-card-content>
+
     <mat-card-actions>
-      <button mat-button>Login</button>
+      <button mat-button type="submit" [disabled]="!loginForm.valid">Login</button>
     </mat-card-actions>
-  </mat-card>
-  
-  </form>
+  </mat-card>  
+</form>
 

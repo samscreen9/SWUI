@@ -1,22 +1,5 @@
-<mat-toolbar color="primary" class="mat-elevation-z2">
-    <button *ngIf="isAuthenticated"  (click)="menu.drawer.toggle()" mat-icon-button>
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>User Management</span>
-    <div class="spacer"><!--creates adjustable empty space bewteen logo and button--></div>
-    <div class="fContainer">
-        <a mat-button class="fItem">Home</a>
-        <a mat-button class="fItem" >About</a>
-        <a mat-button class="fItem" >Contact</a>
-        <a *ngIf="isAuthenticated" mat-raised-button class="fItem" color="accent" (click)="onlogout()">Logout</a>
-    </div>
-</mat-toolbar>
-<app-menubar #menu [item]="isAuthenticated"></app-menubar>
-
-
-<!--  //addded a seperate menu bar
 <mat-drawer-container  autosize>
-    <mat-drawer  #drawer [opened]=isAuthenticated mode="side" position="start">
+    <mat-drawer  #drawer [opened]=item mode="side" position="start">
     <mat-nav-list>
         <mat-list-item>
             <button routerLink="" mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
@@ -49,5 +32,4 @@
             <router-outlet></router-outlet>
             </div>
     </mat-drawer-content>
-</mat-drawer-container> 
--->
+</mat-drawer-container>
